@@ -9,7 +9,16 @@
         height = 30;
         modules-left = ["hyprland/workspaces"];
         modules-center = ["hyprland/window"];
-        modules-right = ["cpu" "memory" "hyprland/language" "custom/weather" "pulseaudio" "battery" "clock" "tray"];
+        modules-right = [
+          "cpu" 
+          "memory" 
+          # "hyprland/language" dont need multilanguage support for now
+          "custom/weather" 
+          "pulseaudio" 
+          "battery" 
+          "clock" 
+          # "tray" tray is not working
+        ];
         "hyprland/workspaces" = {
           disable-scroll = true;
           show-special = true;

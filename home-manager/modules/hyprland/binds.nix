@@ -1,9 +1,9 @@
 {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$mainMod SHIFT, Return, exec, $terminal"
-      "$mainMod SHIFT, C, killactive,"
-      "$mainMod SHIFT, Q, exit,"
+      "$mainMod, Return, exec, $terminal"
+      "$mainMod SHIFT, Q, killactive,"
+      # "$mainMod SHIFT, Q, exit,"
       "$mainMod,       R, exec, $fileManager"
       "$mainMod,       F, togglefloating,"
       "$mainMod,       D, exec, $menu --show drun"
@@ -24,17 +24,32 @@
       "$mainMod, up, movefocus, u"
       "$mainMod, down, movefocus, d"
 
+      "$mainMod, h, movefocus, l"
+      "$mainMod, l, movefocus, r"
+      "$mainMod, j, movefocus, u"
+      "$mainMod, k, movefocus, d"
+
       # Moving windows
       "$mainMod SHIFT, left,  swapwindow, l"
       "$mainMod SHIFT, right, swapwindow, r"
       "$mainMod SHIFT, up,    swapwindow, u"
       "$mainMod SHIFT, down,  swapwindow, d"
 
+      "$mainMod SHIFT, h, swapwindow, l"
+      "$mainMod SHIFT, l, swapwindow, r"
+      "$mainMod SHIFT, j, swapwindow, u"
+      "$mainMod SHIFT, k, swapwindow, d"
+
       # Resizeing windows                   X  Y
       "$mainMod CTRL, left,  resizeactive, -60 0"
       "$mainMod CTRL, right, resizeactive,  60 0"
       "$mainMod CTRL, up,    resizeactive,  0 -60"
       "$mainMod CTRL, down,  resizeactive,  0  60"
+
+      "$mainMod CTRL, hyprland,  resizeactive, -60 0"
+      "$mainMod CTRL, l, resizeactive,  60 0"
+      "$mainMod CTRL, j,    resizeactive,  0 -60"
+      "$mainMod CTRL, k,  resizeactive,  0  60"
 
       # Switching workspaces
       "$mainMod, 1, workspace, 1"
